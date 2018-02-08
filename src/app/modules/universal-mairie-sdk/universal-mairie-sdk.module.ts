@@ -25,20 +25,20 @@ import { WeatherService } from '../services/weather.service';
     HttpClientModule
   ],
   declarations: [],
-  providers: [ArticleService, AssociationAnnounceService, AssociationSubscriptionService, AssociationService, DirectoryCategoryService, DiscussionMessageService, DiscussionService, FirebaseService, NewsService, ReportService, SessionService, ShopService, TownhallFeatureService, TownhallService, UserService, WeatherService]
+  providers: []
 })
 export class UniversalMairieSdkModule { 
-  static UNIVERSAL_CONFIG = {
-    API_URL: '',
-    FIREBASE_API_KEY: '',
-    FIREBASE_AUTH_DOMAIN: '',
-    FIREBASE_DATABASE_URL: '',
-    FIREBASE_STORAGE_BUCKET: ''
-  }
+  // static UNIVERSAL_CONFIG = {
+  //   API_URL: '',
+  //   FIREBASE_API_KEY: '',
+  //   FIREBASE_AUTH_DOMAIN: '',
+  //   FIREBASE_DATABASE_URL: '',
+  //   FIREBASE_STORAGE_BUCKET: ''
+  // }
 
   public static forRoot(ENV): ModuleWithProviders {
-    UniversalMairieSdkModule.UNIVERSAL_CONFIG = ENV;
+    // UniversalMairieSdkModule.UNIVERSAL_CONFIG = ENV;
 
-    return {ngModule: UniversalMairieSdkModule, providers: [ArticleService, AssociationAnnounceService, AssociationSubscriptionService, AssociationService, DirectoryCategoryService, DiscussionMessageService, DiscussionService, FirebaseService, NewsService, ReportService, SessionService, ShopService, TownhallFeatureService, TownhallService, UserService, WeatherService]};
+    return {ngModule: UniversalMairieSdkModule, providers: []};
   }
 }
