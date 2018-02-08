@@ -28,13 +28,13 @@ import { WeatherService } from '../services/weather.service';
   providers: []
 })
 export class UniversalMairieSdkModule { 
-  // static UNIVERSAL_CONFIG = {
-  //   API_URL: '',
-  //   FIREBASE_API_KEY: '',
-  //   FIREBASE_AUTH_DOMAIN: '',
-  //   FIREBASE_DATABASE_URL: '',
-  //   FIREBASE_STORAGE_BUCKET: ''
-  // }
+  static UNIVERSAL_CONFIG = {
+    API_URL: '',
+    FIREBASE_API_KEY: '',
+    FIREBASE_AUTH_DOMAIN: '',
+    FIREBASE_DATABASE_URL: '',
+    FIREBASE_STORAGE_BUCKET: ''
+  }
 
   public static forRoot(ENV): ModuleWithProviders {
     // UniversalMairieSdkModule.UNIVERSAL_CONFIG = ENV;
