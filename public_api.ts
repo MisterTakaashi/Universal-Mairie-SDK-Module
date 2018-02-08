@@ -1,4 +1,4 @@
-export * from './src/app/modules/universal-mairie-sdk/universal-mairie-sdk.module';
+export * from "./src/app/modules/universal-mairie-sdk/universal-mairie-sdk.module";
 
 export * from './src/app/modules/services/article.service';
 export * from './src/app/modules/services/association-announce.service';

@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('universal-mairie-sdk App', () => {
+describe('packagr-test-sdk App', () => {
   let page: AppPage;
 
   beforeEach(() => {
