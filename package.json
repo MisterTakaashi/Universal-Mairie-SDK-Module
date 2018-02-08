@@ -1,6 +1,6 @@
 {
   "name": "universal-mairie-sdk",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -10,6 +10,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "packagr": "ng-packagr -p package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://MisterTakaashi@github.com/MisterTakaashi/Universal-Mairie-SDK-Module.git"
   },
   "dependencies": {
     "@angular/animations": "^5.1.3",
