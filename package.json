@@ -1,6 +1,6 @@
 {
-  "name": "packagr-test-sdk",
-  "version": "0.0.16",
+  "name": "universal-townhall-sdk",
+  "version": "0.0.4",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
