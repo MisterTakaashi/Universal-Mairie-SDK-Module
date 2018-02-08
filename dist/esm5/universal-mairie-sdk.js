@@ -1,43 +1,7 @@
-import { NgModule, Injectable } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { Injectable, NgModule } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { initializeApp, storage } from 'firebase';
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-var UniversalMairieSdkModule = /** @class */ (function () {
-    function UniversalMairieSdkModule() {
-    }
-    /**
-     * @param {?} ENV
-     * @return {?}
-     */
-    UniversalMairieSdkModule.forRoot = function (ENV) {
-        // UniversalMairieSdkModule.UNIVERSAL_CONFIG = ENV;
-        return { ngModule: UniversalMairieSdkModule, providers: [] };
-    };
-    return UniversalMairieSdkModule;
-}());
-UniversalMairieSdkModule.UNIVERSAL_CONFIG = {
-    API_URL: '',
-    FIREBASE_API_KEY: '',
-    FIREBASE_AUTH_DOMAIN: '',
-    FIREBASE_DATABASE_URL: '',
-    FIREBASE_STORAGE_BUCKET: ''
-};
-UniversalMairieSdkModule.decorators = [
-    { type: NgModule, args: [{
-                imports: [
-                    CommonModule,
-                    HttpClientModule
-                ],
-                declarations: [],
-                providers: []
-            },] },
-];
-/** @nocollapse */
-UniversalMairieSdkModule.ctorParameters = function () { return []; };
+import { CommonModule } from '@angular/common';
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
@@ -1143,6 +1107,42 @@ WeatherService.decorators = [
 WeatherService.ctorParameters = function () { return [
     { type: HttpClient, },
 ]; };
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+var UniversalMairieSdkModule = /** @class */ (function () {
+    function UniversalMairieSdkModule() {
+    }
+    /**
+     * @param {?} ENV
+     * @return {?}
+     */
+    UniversalMairieSdkModule.forRoot = function (ENV) {
+        UniversalMairieSdkModule.UNIVERSAL_CONFIG = ENV;
+        return { ngModule: UniversalMairieSdkModule, providers: [ArticleService, AssociationAnnounceService, AssociationSubscriptionService, AssociationService, DirectoryCategoryService, DiscussionMessageService, DiscussionService, FirebaseService, NewsService, ReportService, SessionService, ShopService, TownhallFeatureService, TownhallService, UserService, WeatherService] };
+    };
+    return UniversalMairieSdkModule;
+}());
+UniversalMairieSdkModule.UNIVERSAL_CONFIG = {
+    API_URL: '',
+    FIREBASE_API_KEY: '',
+    FIREBASE_AUTH_DOMAIN: '',
+    FIREBASE_DATABASE_URL: '',
+    FIREBASE_STORAGE_BUCKET: ''
+};
+UniversalMairieSdkModule.decorators = [
+    { type: NgModule, args: [{
+                imports: [
+                    CommonModule,
+                    HttpClientModule
+                ],
+                declarations: [],
+                providers: [ArticleService, AssociationAnnounceService, AssociationSubscriptionService, AssociationService, DirectoryCategoryService, DiscussionMessageService, DiscussionService, FirebaseService, NewsService, ReportService, SessionService, ShopService, TownhallFeatureService, TownhallService, UserService, WeatherService]
+            },] },
+];
+/** @nocollapse */
+UniversalMairieSdkModule.ctorParameters = function () { return []; };
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc

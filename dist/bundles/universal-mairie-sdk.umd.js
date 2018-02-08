@@ -1,45 +1,9 @@
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/common/http'), require('firebase')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/common', '@angular/common/http', 'firebase'], factory) :
-	(factory((global['universal-mairie-sdk'] = {}),global.ng.core,global.ng.common,global.ng.common.http,global.firebase));
-}(this, (function (exports,core,common,http,firebase) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common/http'), require('firebase'), require('@angular/common')) :
+	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/common/http', 'firebase', '@angular/common'], factory) :
+	(factory((global['universal-mairie-sdk'] = {}),global.ng.core,global.ng.common.http,global.firebase,global.ng.common));
+}(this, (function (exports,core,http,firebase,common) { 'use strict';
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-var UniversalMairieSdkModule = /** @class */ (function () {
-    function UniversalMairieSdkModule() {
-    }
-    /**
-     * @param {?} ENV
-     * @return {?}
-     */
-    UniversalMairieSdkModule.forRoot = function (ENV) {
-        // UniversalMairieSdkModule.UNIVERSAL_CONFIG = ENV;
-        return { ngModule: UniversalMairieSdkModule, providers: [] };
-    };
-    return UniversalMairieSdkModule;
-}());
-UniversalMairieSdkModule.UNIVERSAL_CONFIG = {
-    API_URL: '',
-    FIREBASE_API_KEY: '',
-    FIREBASE_AUTH_DOMAIN: '',
-    FIREBASE_DATABASE_URL: '',
-    FIREBASE_STORAGE_BUCKET: ''
-};
-UniversalMairieSdkModule.decorators = [
-    { type: core.NgModule, args: [{
-                imports: [
-                    common.CommonModule,
-                    http.HttpClientModule
-                ],
-                declarations: [],
-                providers: []
-            },] },
-];
-/** @nocollapse */
-UniversalMairieSdkModule.ctorParameters = function () { return []; };
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
@@ -1145,6 +1109,42 @@ WeatherService.decorators = [
 WeatherService.ctorParameters = function () { return [
     { type: http.HttpClient, },
 ]; };
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+var UniversalMairieSdkModule = /** @class */ (function () {
+    function UniversalMairieSdkModule() {
+    }
+    /**
+     * @param {?} ENV
+     * @return {?}
+     */
+    UniversalMairieSdkModule.forRoot = function (ENV) {
+        UniversalMairieSdkModule.UNIVERSAL_CONFIG = ENV;
+        return { ngModule: UniversalMairieSdkModule, providers: [ArticleService, AssociationAnnounceService, AssociationSubscriptionService, AssociationService, DirectoryCategoryService, DiscussionMessageService, DiscussionService, FirebaseService, NewsService, ReportService, SessionService, ShopService, TownhallFeatureService, TownhallService, UserService, WeatherService] };
+    };
+    return UniversalMairieSdkModule;
+}());
+UniversalMairieSdkModule.UNIVERSAL_CONFIG = {
+    API_URL: '',
+    FIREBASE_API_KEY: '',
+    FIREBASE_AUTH_DOMAIN: '',
+    FIREBASE_DATABASE_URL: '',
+    FIREBASE_STORAGE_BUCKET: ''
+};
+UniversalMairieSdkModule.decorators = [
+    { type: core.NgModule, args: [{
+                imports: [
+                    common.CommonModule,
+                    http.HttpClientModule
+                ],
+                declarations: [],
+                providers: [ArticleService, AssociationAnnounceService, AssociationSubscriptionService, AssociationService, DirectoryCategoryService, DiscussionMessageService, DiscussionService, FirebaseService, NewsService, ReportService, SessionService, ShopService, TownhallFeatureService, TownhallService, UserService, WeatherService]
+            },] },
+];
+/** @nocollapse */
+UniversalMairieSdkModule.ctorParameters = function () { return []; };
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc

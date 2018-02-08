@@ -25,7 +25,7 @@ import { WeatherService } from '../services/weather.service';
     HttpClientModule
   ],
   declarations: [],
-  providers: []
+  providers: [ArticleService, AssociationAnnounceService, AssociationSubscriptionService, AssociationService, DirectoryCategoryService, DiscussionMessageService, DiscussionService, FirebaseService, NewsService, ReportService, SessionService, ShopService, TownhallFeatureService, TownhallService, UserService, WeatherService]
 })
 export class UniversalMairieSdkModule { 
   static UNIVERSAL_CONFIG = {
@@ -37,8 +37,8 @@ export class UniversalMairieSdkModule {
   }
 
   public static forRoot(ENV): ModuleWithProviders {
-    // UniversalMairieSdkModule.UNIVERSAL_CONFIG = ENV;
+    UniversalMairieSdkModule.UNIVERSAL_CONFIG = ENV;
 
-    return {ngModule: UniversalMairieSdkModule, providers: []};
+    return {ngModule: UniversalMairieSdkModule, providers: [ArticleService, AssociationAnnounceService, AssociationSubscriptionService, AssociationService, DirectoryCategoryService, DiscussionMessageService, DiscussionService, FirebaseService, NewsService, ReportService, SessionService, ShopService, TownhallFeatureService, TownhallService, UserService, WeatherService]};
   }
 }
