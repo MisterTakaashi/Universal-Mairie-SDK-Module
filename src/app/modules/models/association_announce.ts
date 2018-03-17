@@ -5,5 +5,6 @@ export class AssociationAnnounceModel {
   title: string;
   content: string;
   association_creator: AssociationModel;
+  validated: boolean;
   notification: boolean;
 }
