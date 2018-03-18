@@ -11,6 +11,11 @@ export class AssociationAnnounceService {
   constructor(private _http: HttpClient) {
 
   }
+  
+  getAssociationAnnounces(townhall: number): Observable<AssociationAnnounceModel[]> {
+    return this._http
+      .get(UniversalTownhallSDK.UNIVERSAL_CONFIG.API_URL + '/v1/townhalls/' + townhall + '/associations/announces');
+  }
 
   getAssociationAnnounce(townhall: number, association_id: number): Observable<AssociationAnnounceModel[]> {
     return this._http
