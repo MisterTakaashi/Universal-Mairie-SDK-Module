@@ -4,4 +4,5 @@ export class NewsModel {
   image: string;
   description: string;
   content: string;
+  created_at: Date;
 }
