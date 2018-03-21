@@ -14,7 +14,7 @@ export class AssociationAnnounceService {
   
   getAssociationAnnounces(townhall: number): Observable<AssociationAnnounceModel[]> {
     return this._http
-      .get(UniversalTownhallSDK.UNIVERSAL_CONFIG.API_URL + '/v1/townhalls/' + townhall + '/associations/announces');
+      .get<AssociationAnnounceModel[]>(UniversalMairieSdkModule.UNIVERSAL_CONFIG.API_URL + '/v1/townhalls/' + townhall + '/associations/announces');
   }
 
   getAssociationAnnounce(townhall: number, association_id: number): Observable<AssociationAnnounceModel[]> {
