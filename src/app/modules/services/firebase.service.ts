@@ -18,7 +18,9 @@ export class FirebaseService {
       storageBucket: UniversalMairieSdkModule.UNIVERSAL_CONFIG.FIREBASE_STORAGE_BUCKET
     };
 
-    Firebase.initializeApp(universal_firebase_config);
+    if (!Firebase.apps.length) {
+      Firebase.initializeApp(universal_firebase_config);
+    }
 
     this.storage = Firebase.storage();
   }
