@@ -7,4 +7,5 @@ export class AssociationAnnounceModel {
   association_creator: AssociationModel;
   validated: boolean;
   notification: boolean;
+  created_at: Date;
 }

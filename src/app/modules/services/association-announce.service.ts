@@ -13,6 +13,7 @@ export class AssociationAnnounceService {
   }
   
   getAssociationAnnounces(townhall: number): Observable<AssociationAnnounceModel[]> {
+
     return this._http
       .get<AssociationAnnounceModel[]>(UniversalMairieSdkModule.UNIVERSAL_CONFIG.API_URL + '/v1/townhalls/' + townhall + '/associations/announces');
   }
@@ -30,6 +31,17 @@ export class AssociationAnnounceService {
   updateAssociationAnnounceById(townhall: number, association_id: number, id: number, newAnnounce: AssociationAnnounceModel): Observable<AssociationAnnounceModel> {
     return this._http
       .patch<AssociationAnnounceModel>(UniversalMairieSdkModule.UNIVERSAL_CONFIG.API_URL + '/v1/townhalls/' + townhall + '/associations/' + association_id + '/announces/' + id, { newAnnounce: newAnnounce });
+  }
+
+  validateAssociationAnnounceById(townhall: number, association_id: number, id: number): Observable<AssociationAnnounceModel> {
+    console.log(UniversalMairieSdkModule.UNIVERSAL_CONFIG.API_URL + '/v1/townhalls/' + townhall + '/associations/' + association_id + '/announces/' + id +'/validate',{})
+    return this._http
+      .patch<AssociationAnnounceModel>(UniversalMairieSdkModule.UNIVERSAL_CONFIG.API_URL + '/v1/townhalls/' + townhall + '/associations/' + association_id + '/announces/' + id +'/validate',{});
+  }
+
+  rejectAssociationAnnounceById(townhall: number, association_id: number, id: number): Observable<AssociationAnnounceModel> {
+    return this._http
+      .patch<AssociationAnnounceModel>(UniversalMairieSdkModule.UNIVERSAL_CONFIG.API_URL + '/v1/townhalls/' + townhall + '/associations/' + association_id + '/announces/' + id +'/reject',{});
   }
 
   /*deleteAssociationAnnounceById(townhall: number, id: number): Observable<void> {

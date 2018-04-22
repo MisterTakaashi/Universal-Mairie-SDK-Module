@@ -21,6 +21,7 @@ export class AssociationService {
 
     return this._http
       .get<AssociationModel[]>(UniversalMairieSdkModule.UNIVERSAL_CONFIG.API_URL + '/v1/townhalls/' + townhall + '/associations' + queryString);
+      
   }
 
   getAssociationById(townhall: number, id: number): Observable<AssociationModel> {
